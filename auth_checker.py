@@ -46,7 +46,7 @@ def get_sessions():
     for user, password in accounts.items():
         session = {}
 
-        burp0_data = {"HEADER": "content", "username": user, "password_input": password}
+        burp0_data = {"parameter": "content", "username": user, "password_input": password}
         resp = requests.post(url + path1, data=burp0_data, verify=False, allow_redirects=False)
         dat = resp.json()
         userid = dat.get('userId')
