@@ -129,7 +129,7 @@ def run_requests():
         create_stuff(session, results)
 
         # 4 delete user Manager
-        if session["user"].find("Manager") == -1:
+        if session["user"].find("Manager") != -1:
             delete_user(session, results)
 
         # 5 ...
